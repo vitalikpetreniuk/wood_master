@@ -1,0 +1,17 @@
+.custom-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c0bebb;
+  padding: 0 0 20px 0;
+  &::placeholder {
+    color: #adaaa8;
+    font-size: 18px;
+    font-family: Rubik, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    @include media-max(575) {
+      font-size: 14px;
+    }
+  }
+}

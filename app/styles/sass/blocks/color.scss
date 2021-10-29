@@ -1,0 +1,38 @@
+.color {
+  &-white {
+    color: #FFFFFF;
+  }
+  &-brown {
+    color: #40372f;
+  }
+  &-light-brown {
+    color: #b58b5b;
+  }
+}
+
+.bg-black {
+  background: #000000;
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.bg-grey-gradient {
+  background: linear-gradient(90deg, #33363a, #33363a);
+  opacity: 0.8;
+}
+
+.bg-brown {
+  background: #40372f;
+  transition: 1s;
+}
+
+.bg-brown-opacity {
+  background: rgba(64, 55, 47, .8);
+  transition: 1s;
+}
+
+.bg-light-brown {
+  background: #b58b5b;
+}

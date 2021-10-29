@@ -1,0 +1,50 @@
+.font-lg {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 90px;
+  @include media-max(767) {
+    font-size: 55px;
+  }
+  @include media-max(575) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.font-rubik-light {
+  font-weight: 300;
+  font-family: Rubik, sans-serif;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+
+// Font Size
+
+.fz {
+  &-50-30 {
+    font-size: 50px;
+    @include media-max(575) {
+      font-size: 30px;
+    }
+  }
+  &-30-18 {
+    font-size: 30px;
+    @include media-max(575) {
+      font-size: 18px;
+    }
+  }
+}
+
+// Line height
+
+.lh {
+  &-60 {
+    line-height: 60px;
+  }
+}

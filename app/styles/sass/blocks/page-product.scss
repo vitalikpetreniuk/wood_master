@@ -1,0 +1,14 @@
+.page-product {
+  &__title {
+    margin-bottom: 60px;
+    @include media-max(575) {
+      margin-bottom: 25px;
+    }
+  }
+  &__info {
+    margin-top: 130px;
+    @include media-max(575) {
+      margin-top: 60px;
+    }
+  }
+}

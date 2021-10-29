@@ -1,0 +1,152 @@
+// USER VARIABLES SECTION
+
+$accent: orange; // Accent Color
+$fontsize: 18px; // Body Font Size
+$textcolor: #40372f; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: Montserrat, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 70px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+@import "media";
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,500;1,700;1,900&display=swap');
+
+//@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+//@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+//@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
+//@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder {
+  color: #666;
+}
+
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+body {
+  font-family: $userfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $textcolor;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+input {
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: #FFFFFF;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  &:hover {
+    color: unset;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  @include media-min(1400) {
+    max-width: 1400px;
+  }
+  &-large {
+    @include media-min(1760) {
+      max-width: 1760px;
+    }
+  }
+  &-medium {
+    @include media-min(1260) {
+      max-width: 1260px;
+    }
+  }
+  &-small {
+    @include media-min(1080) {
+      max-width: 1080px;
+    }
+  }
+}
+
+._ibg {
+  position: relative;
+  img,
+  .opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+._over-hidden {
+  overflow: hidden;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s;
+}
+
+.d-none {
+  display: none;
+}
+
+.height-100vh {
+  height: 100vh;
+}
+
+._over-scroll-y {
+  overflow-y: scroll;
+  &::-webkit-scrollbar { width: 0; }
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-color: rgba(0,0,0,0.7) rgba(0,0,0,0.7);
+  scrollbar-width: thin;
+}

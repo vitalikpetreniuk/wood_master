@@ -1,0 +1,155 @@
+.page-contacts {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  @include media-max(991) {
+    display: none!important;
+    min-height: auto;
+    overflow-y: unset;
+  }
+  &__container {
+    margin: auto;
+    @include media-max(991) {
+      flex-direction: column;
+    }
+  }
+  &__bg-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+    @include media-max(991) {
+      width: 100%;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(64, 55, 47, .95);;
+      z-index: 1;
+    }
+  }
+  &__bg-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+    background: #FFFFFF;
+    @include media-max(991) {
+      width: 100%;
+    }
+  }
+  &__info,
+  &__form {
+    max-width: 540px;
+    width: 100%;
+    @include media-max(991) {
+      max-width: none;
+    }
+  }
+  &__info {
+    &-title {
+      margin-top: 20px;
+      margin-bottom: 90px;
+      @include media-max(991) {
+        margin-top: 62px;
+      }
+      @include media-max(575) {
+        margin-bottom: 36px;
+      }
+    }
+    &-text {
+      max-width: 320px;
+      @include media-max(575) {
+        max-width: 235px;
+      }
+    }
+    & > span {
+      display: inline-block;
+      &:first-of-type {
+        margin-bottom: 60px;
+        @include media-max(575) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    &-address {
+      margin-top: 98px;
+      @include media-max(575) {
+        margin-top: 36px;
+      }
+    }
+    .link {
+      margin-top: 32px;
+      @include media-max(575) {
+        margin-top: 25px;
+      }
+      span {
+        margin-right: 20px;
+        text-transform: uppercase;
+      }
+      svg {
+        width: 20px;
+        height: 15px;
+        fill: #b58b5b;
+      }
+    }
+  }
+  &__form {
+    padding-top: 15px;
+    margin-left: 100px;
+    @include media-max(991) {
+      margin-left: 0;
+      padding-top: 70px;
+    }
+    &-title {
+      line-height: 40px;
+      font-weight: 400;
+      margin-bottom: 60px;
+      @include media-max(575) {
+        text-align: center;
+        margin-bottom: 50px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+
+.page-contacts-mobile {
+  @include media-min(992) {
+    display: none;
+  }
+  &__info {
+    padding-bottom: 70px;
+  }
+  &__form {
+    position: relative;
+    & > a {
+      @include media-min(992) {
+        display: none;
+      }
+      display: flex;
+      margin-top: 100px;
+      padding: 26px 0;
+      svg {
+        fill: #FFFFFF;
+        width: 25px;
+        height: 28px;
+      }
+      span {
+        line-height: 10px;
+        margin-left: 15px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

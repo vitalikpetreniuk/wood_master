@@ -1,0 +1,17 @@
+.form {
+  input {
+    &:not(:last-of-type) {
+      margin-bottom: 60px;
+      @include media-max(575) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  button {
+    margin-top: 65px;
+    width: fit-content;
+    @include media-max(991) {
+      margin: 65px auto 0;
+    }
+  }
+}

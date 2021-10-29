@@ -1,0 +1,45 @@
+.header {
+  &__subtext {
+    margin-right: 125px;
+    @include media-max(991) {
+      display: none;
+    }
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
+.header-scroll {
+  position: fixed;
+  top: -125px;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  background: #404040;
+  transition: top .3s;
+  z-index: 2;
+  @include media-max(575) {
+    padding: 18px 0;
+  }
+  a {
+    @include media-max(575) {
+      overflow: hidden;
+      max-width: 80px;
+    }
+  }
+  &.active {
+    top: 0;
+  }
+  &__right {
+    cursor: pointer;
+    & > span {
+      margin-left: 38px;
+      text-transform: uppercase;
+      font-weight: 300;
+      @include media-max(767) {
+        display: none;
+      }
+    }
+  }
+}

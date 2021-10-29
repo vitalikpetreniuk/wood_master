@@ -1,0 +1,32 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background-opacity {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.bg-home {
+  background-image: url("../images/dist/main/1.jpg") !important;
+}
+
+.bg-products {
+  background-image: url("../images/dist/main/2.jpg") !important;
+}
+
+.bg-about {
+  background-image: url("../images/dist/main/3.jpg") !important;
+}
+
+.bg-contacts {
+  background-image: url("../images/dist/main/1.jpg") !important;
+}

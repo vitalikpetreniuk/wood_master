@@ -1,0 +1,47 @@
+.slider {
+  max-height: 675px;
+  position: relative;
+  &::before {
+    @include media-max(575) {
+      content: url("../images/dist/icons/swipe.svg");
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translate(-50%);
+      z-index: 1;
+    }
+  }
+  img {
+    object-fit: cover;
+    max-width: 1400px;
+    max-height: 675px;
+  }
+  .slick-arrow {
+    width: 70px;
+    height: 52px;
+    opacity: 1;
+    z-index: 1;
+    top: unset;
+    bottom: 53px;
+    @include media-max(767) {
+      bottom: 30px;
+    }
+    &::before {
+      content: url("../images/dist/icons/arrow-to-right-white.svg");
+      color: #a90f0f;
+    }
+  }
+  .slick-prev {
+    left: 70px;
+    transform: rotate(-180deg);
+    @include media-max(767) {
+      left: 40px;
+    }
+  }
+  .slick-next {
+    right: 70px;
+    @include media-max(767) {
+      right: 40px;
+    }
+  }
+}

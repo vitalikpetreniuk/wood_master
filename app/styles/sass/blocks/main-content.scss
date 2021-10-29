@@ -1,0 +1,23 @@
+.main-content {
+  margin: auto 0;
+  h1 {
+    max-width: 640px;
+    width: 100%;
+  }
+  h2 {
+    max-width: 660px;
+    font-size: 28px;
+    line-height: 24px;
+    font-family: Rubik, sans-serif;
+    font-weight: 300;
+    margin: 70px 0 47px 0;
+    @include media-max(767) {
+      font-size: 18px;
+    }
+    @include media-max(575) {
+      font-size: 14px;
+      line-height: 20px;
+      margin: 50px 0 30px 0;
+    }
+  }
+}

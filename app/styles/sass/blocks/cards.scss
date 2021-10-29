@@ -1,0 +1,191 @@
+.cards {
+  margin-left: 300px;
+  @include media-max(991) {
+    margin: 0 auto;
+  }
+  ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 6px;
+      background-color: #FFFFFF;
+      border-radius: 9em;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #b58b5b;
+      border-radius: 9em;
+    }
+    scrollbar-color: #b58b5b #FFFFFF;
+    scrollbar-width: thin;
+    @include media-max(991) {
+      flex-direction: column;
+      align-items: center;
+    }
+    li {
+      overflow: hidden;
+      padding: 127px 70px 0 70px;
+      flex: 0 0 auto;
+      position: relative;
+      max-width: 680px;
+      width: 100%;
+      height: calc(100vh - 250px);
+      margin-right: 40px;
+      @include media-max(1199) {
+        max-width: 650px;
+      }
+      @include media-max(991) {
+        padding: 40px 20px 20px 20px;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      @include media-max(575) {
+        max-height: 250px;
+      }
+      @include media-max(767) {
+        max-width: 470px;
+      }
+      @include media-max-h(550) {
+        height: 350px;
+      }
+      &:hover {
+        .cards {
+          &__image {
+            &::before {
+              background: linear-gradient(90deg, rgba(51, 54, 58, .3) , rgba(51, 54, 58, .3));
+              opacity: .3;
+              transition: opacity .4s;
+            }
+          }
+        }
+      }
+      & > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      &:last-of-type {
+        &:hover {
+          .cards {
+            &__title {
+              svg {
+                margin-left: 30px;
+                fill: #b58b5b;
+                @include media-max(991) {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+        padding-bottom: 70px;
+        .custom-wrapper {
+          height: 100%;
+        }
+        .cards {
+          &__image {
+            &::before {
+              display: none;
+            }
+          }
+          &__title {
+            max-width: none;
+            @include media-max(991) {
+              flex-direction: row !important;
+              align-items: center;
+            }
+            margin-bottom: auto;
+            span {
+              font-size: 50px;
+              @include media-max(767) {
+                font-size: 36px;
+              }
+              @include media-max(575) {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;
+              }
+            }
+            svg {
+              margin-top: 60px;
+              width: 70px;
+              height: 52px;
+              fill: #40372f;
+              transition: .4s;
+              @include media-max(991) {
+                order: -1;
+                margin-top: 0;
+                margin-right: 20px;
+              }
+              @include media-max(575) {
+                width: 30px;
+                height: 22px;
+              }
+            }
+          }
+          &__icon {
+            @include media-max(991) {
+              display: none;
+            }
+            svg {
+              width: 87px;
+              height: 75px;
+              fill: #c19e76;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(51, 54, 58, .7) , rgba(51, 54, 58, .7));
+      z-index: 1;
+      opacity: 1;
+      transition: opacity .4s;
+    }
+  }
+  &__title {
+    word-break: break-word;
+    display: inline-block;
+    position: relative;
+    max-width: 450px;
+    @include media-max(575) {
+      max-width: 190px;
+    }
+    &:hover {
+      color: #FFFFFF;
+    }
+  }
+  &__subtitle {
+    position: relative;
+    max-width: 300px;
+    margin-top: 50px;
+    line-height: 24px;
+    @include media-max(575) {
+      margin-top: 20px;
+      font-size: 14px;
+      max-width: 230px;
+    }
+    &:hover {
+      color: #FFFFFF;
+    }
+  }
+}

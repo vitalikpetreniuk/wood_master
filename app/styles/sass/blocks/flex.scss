@@ -1,0 +1,7 @@
+.flex-column {
+  &-991 {
+    @include media-max(991) {
+      flex-direction: column;
+    }
+  }
+}
