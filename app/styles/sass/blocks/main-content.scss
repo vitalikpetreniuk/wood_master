@@ -1,5 +1,9 @@
 .main-content {
   margin: auto 0;
+  transform: translate(0, -13%);
+  @include media-max-h(650) {
+    transform: translate(0, 0);
+  }
   h1 {
     max-width: 640px;
     width: 100%;

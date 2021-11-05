@@ -1,4 +1,8 @@
 .header {
+  padding: 0 90px 0 70px;
+  @include media-max(575) {
+    padding: 0 20px;
+  }
   &__subtext {
     margin-right: 125px;
     @include media-max(991) {
@@ -8,6 +12,38 @@
       font-size: 30px;
     }
   }
+  &__right {
+    cursor: pointer;
+    & > span {
+      opacity: 0;
+      visibility: hidden;
+      font-size: 0;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin-left: 0;
+      transition: .4s;
+      &.visible {
+        @include media-min(1101) {
+          margin-left: 38px;
+          opacity: 1;
+          visibility: visible;
+          font-size: 18px;
+        }
+      }
+    }
+    &:hover {
+      .burger {
+        span {
+          &:last-of-type {
+            width: 40px;
+            @include media-max(575) {
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .header-scroll {
@@ -15,17 +51,21 @@
   top: -125px;
   left: 0;
   width: 100%;
-  padding: 30px 0;
+  padding: 25px 90px 25px 70px;
   background: #404040;
   transition: top .3s;
   z-index: 2;
   @include media-max(575) {
-    padding: 18px 0;
+    padding: 18px 20px;
+  }
+  .logo img {
+    width: 210px;
+    height: 50px;
   }
   a {
     @include media-max(575) {
       overflow: hidden;
-      max-width: 80px;
+      max-width: 95px;
     }
   }
   &.active {
@@ -39,6 +79,18 @@
       font-weight: 300;
       @include media-max(767) {
         display: none;
+      }
+    }
+    &:hover {
+      .burger {
+        span {
+          &:last-of-type {
+            width: 40px;
+            @include media-max(575) {
+              width: 30px;
+            }
+          }
+        }
       }
     }
   }

@@ -58,7 +58,7 @@
   &__info {
     &-title {
       margin-top: 20px;
-      margin-bottom: 90px;
+      margin-bottom: 70px;
       @include media-max(991) {
         margin-top: 62px;
       }
@@ -82,29 +82,36 @@
       }
     }
     &-address {
-      margin-top: 98px;
+      margin-top: 94px;
       @include media-max(575) {
         margin-top: 36px;
       }
     }
     .link {
+      width: fit-content;
       margin-top: 32px;
       @include media-max(575) {
         margin-top: 25px;
       }
       span {
-        margin-right: 20px;
+        margin-right: 10px;
         text-transform: uppercase;
+        transition: .4s;
       }
       svg {
         width: 20px;
         height: 15px;
         fill: #b58b5b;
       }
+      &:hover {
+        span {
+          margin-right: 20px;
+        }
+      }
     }
   }
   &__form {
-    padding-top: 15px;
+    padding-top: 40px;
     margin-left: 100px;
     @include media-max(991) {
       margin-left: 0;

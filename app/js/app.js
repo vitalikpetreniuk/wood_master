@@ -6,6 +6,10 @@ import "slick-carousel"
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  $('.header__right').hover(() => {
+    $('.header__right > span').toggleClass('visible')
+  })
+
   // nav items
 	$('.sidebar-list ul li:first-of-type').hover(() => {
     $('#category1').toggleClass('hidden-background')
@@ -19,13 +23,19 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#category3').toggleClass('hidden-background')
   })
 
-  const changeImage = (el, id, background) => {
+  const changeImage = (el, background) => {
     $(el).hover(() => {
-      $('.menu').toggleClass(background)
-      $('.menu__background .textur').toggleClass('d-none')
-      $('.main-image').toggleClass('hidden')
-      $(id).toggleClass('hidden')
-      $('.header').toggleClass('index-m10')
+      if (!$('.menu').hasClass(background)) {
+        $('.menu').addClass(background)
+        $('.menu__background .textur').addClass('d-none')
+        $('.main-image').addClass('hidden')
+        $('.header').addClass('index-m10')
+      } else {
+        $('.menu').removeClass(background)
+        // $('.menu__background .textur').removeClass('d-none')
+        $('.main-image').removeClass('hidden')
+        $('.header').removeClass('index-m10')
+      }
     })
   }
 
@@ -43,10 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Check condition for screen width
     if($vWidth > 1280){
-      changeImage('.menu__nav-list > li:first-of-type', '#home', 'bg-home')
-      changeImage('.menu__nav-list > li:nth-of-type(2)', '#products', 'bg-products')
-      changeImage('.menu__nav-list > li:nth-of-type(3)', '#about', 'bg-about')
-      changeImage('.menu__nav-list > li:last-of-type', '#contacts', 'bg-contacts')
+      changeImage('.menu__nav-list > li:first-of-type', 'bg-home')
+      changeImage('.menu__nav-list > li:nth-of-type(2)', 'bg-products')
+      changeImage('.menu__nav-list > li:nth-of-type(3)', 'bg-about')
+      changeImage('.menu__nav-list > li:last-of-type', 'bg-contacts')
+      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:first-of-type', 'bg-construct')
+      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:nth-of-type(2)', 'bg-prod')
+      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:last-of-type', 'bg-furniture')
     }
   }
 
@@ -68,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentScrollPosition = newScrollPosition;
   });
 
-  $('.sidebar-top, .menu__right-close, .close, .header .burger, .header-scroll__right').on('click', () => {
+  $('.sidebar-top, .menu__right-close, .close, .header > .burger, .header-scroll .burger-main, .header-scroll__right, .header__right').on('click', () => {
     $('.menu').toggleClass('active')
     $('.main-content').toggleClass('d-none')
     $('.list-mobile').toggleClass('d-none')
@@ -88,7 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
   $('.slider').slick({
     infinite: true,
     arrows: true,
-    adaptiveHeight: true,
     responsive: [
       {
         breakpoint: 575,

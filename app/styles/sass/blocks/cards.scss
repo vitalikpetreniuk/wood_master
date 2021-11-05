@@ -1,11 +1,12 @@
 .cards {
-  margin-left: 300px;
+  //margin-left: 300px;
   @include media-max(991) {
     margin: 0 auto;
   }
   ul {
+    //margin-left: 300px;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
     padding-bottom: 15px;
     &::-webkit-scrollbar {
       width: 2px;
@@ -32,6 +33,11 @@
       width: 100%;
       height: calc(100vh - 250px);
       margin-right: 40px;
+      &:first-of-type {
+        @include media-min(992) {
+          margin-left: 300px;
+        }
+      }
       @include media-max(1199) {
         max-width: 650px;
       }
@@ -69,6 +75,7 @@
         height: 100%;
       }
       &:last-of-type {
+        margin-right: 260px;
         &:hover {
           .cards {
             &__title {
