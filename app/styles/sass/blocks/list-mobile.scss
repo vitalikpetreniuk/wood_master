@@ -20,6 +20,7 @@
         background: rgba(0, 0, 0, .7);
       }
       &:first-of-type {
+        border-top: 1px solid #b58b5b;
         background-image: url("../images/dist/main/category-mobile-1.jpg");
       }
       &:nth-of-type(2) {

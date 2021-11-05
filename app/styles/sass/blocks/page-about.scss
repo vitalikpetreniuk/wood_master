@@ -46,7 +46,7 @@
           ul {
             li {
               position: relative;
-              margin-top: 75px;
+              margin-top: 85px;
               @include media-max(575) {
                 margin-top: 45px;
                 line-height: 20px;
@@ -58,7 +58,7 @@
                 height: 1px;
                 background: #c2bfbd;
                 position: absolute;
-                top: -30px;
+                top: -24px;
                 left: 0;
                 @include media-max(575) {
                   top: -15px;

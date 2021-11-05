@@ -1,6 +1,6 @@
 .page-product {
   &__title {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     @include media-max(575) {
       margin-bottom: 25px;
     }

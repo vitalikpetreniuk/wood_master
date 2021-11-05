@@ -29,6 +29,9 @@
     height: calc(100% + 8px);
     border: 1px solid #b58b5b;
     transition: .2s;
+    @include media-max(575) {
+      width: calc(100% - 14px);
+    }
   }
   &:hover {
     color: #FFFFFF;

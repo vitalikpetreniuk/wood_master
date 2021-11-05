@@ -14,7 +14,28 @@
   img {
     object-fit: cover;
     max-width: 1400px;
-    max-height: 675px;
+    height: 675px;
+    @include media-max(1199) {
+      height: 593px;
+    }
+    @include media-max(991) {
+      height: 460px;
+    }
+    @include media-max(767) {
+      height: 340px;
+    }
+    @include media-max(575) {
+      height: 363px;
+    }
+    @include media-max(420) {
+      height: 260px;
+    }
+    @include media-max(375) {
+      height: 230px;
+    }
+    @include media-max(340) {
+      height: 193px;
+    }
   }
   .slick-arrow {
     width: 70px;
