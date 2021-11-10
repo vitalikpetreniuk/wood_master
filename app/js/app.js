@@ -3,6 +3,7 @@
 import $ from 'jquery'
 
 import "slick-carousel"
+import validate from "jquery-validation"
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -109,6 +110,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     ]
+  })
+
+  let formContacts = document.querySelectorAll('.form-contacts')
+
+  formContacts.forEach(element => {
+    $(element).validate({
+      rules: {
+        name: {
+          required: true
+        },
+        phone: {
+          required: true
+        }
+      },
+      messages: {
+        name: {
+          required: 'Please enter your name'
+        },
+        phone: {
+          required: 'Please enter your phone'
+        }
+      }
+    })
+
+  })
+
+  $('.form-contacts button[type="submit"]').click((e) => {
+    if ($('.page-contacts .form-contacts').valid() && $('.page-contacts-mobile .form-contacts').valid()) {
+      e.preventDefault()
+      $('.modal, .background-modal').toggleClass('active')
+      $('body').toggleClass('_over-hidden')
+    }
+  })
+
+  $('.modal .close-modal, .background-modal').click(() => {
+    $('.modal, .background-modal').removeClass('active')
+    $('body').removeClass('_over-hidden')
   })
 
 })

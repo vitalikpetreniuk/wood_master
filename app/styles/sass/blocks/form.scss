@@ -1,5 +1,6 @@
 .form {
-  input {
+  & > div {
+    position: relative;
     &:not(:last-of-type) {
       margin-bottom: 60px;
       @include media-max(575) {
@@ -12,6 +13,15 @@
     width: fit-content;
     @include media-max(991) {
       margin: 65px auto 0;
+    }
+  }
+
+  label.error {
+    color: #dc4b4b;
+    position: absolute;
+    bottom: -28px;
+    @include media-max(575) {
+      font-size: 12px;
     }
   }
 }
