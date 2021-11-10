@@ -57,8 +57,11 @@
   }
   &__info {
     &-title {
-      margin-top: 20px;
-      margin-bottom: 70px;
+      margin-top: 40px;
+      margin-bottom: 45px;
+      @include media-max(1366) {
+        margin-bottom: 30px;
+      }
       @include media-max(991) {
         margin-top: 62px;
       }
@@ -76,6 +79,9 @@
       display: inline-block;
       &:first-of-type {
         margin-bottom: 60px;
+        @include media-max(1366) {
+          margin-bottom: 40px;
+        }
         @include media-max(575) {
           margin-bottom: 25px;
         }
@@ -83,6 +89,15 @@
     }
     &-address {
       margin-top: 94px;
+      @include media-max(1366) {
+        margin-top: 100px;
+      }
+      @include media-max(1259) {
+        margin-top: 132px;
+      }
+      @include media-max(991) {
+        margin-top: 80px;
+      }
       @include media-max(575) {
         margin-top: 36px;
       }
@@ -121,6 +136,9 @@
       line-height: 40px;
       font-weight: 400;
       margin-bottom: 60px;
+      @include media-max(1366) {
+        line-height: 28px;
+      }
       @include media-max(575) {
         text-align: center;
         margin-bottom: 50px;

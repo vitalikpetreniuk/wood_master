@@ -1,13 +1,14 @@
 .cards {
-  //margin-left: 300px;
   @include media-max(991) {
     margin: 0 auto;
   }
   ul {
-    //margin-left: 300px;
     flex-wrap: nowrap;
     overflow-x: scroll;
     padding-bottom: 15px;
+    .mCSB_container {
+      display: flex;
+    }
     &::-webkit-scrollbar {
       width: 2px;
       height: 6px;
@@ -25,17 +26,16 @@
       align-items: center;
     }
     li {
-      overflow: hidden;
       padding: 127px 70px 0 70px;
-      flex: 0 0 auto;
       position: relative;
       max-width: 680px;
       width: 100%;
       height: calc(100vh - 250px);
       margin-right: 40px;
+      min-width: 680px;
       &:first-of-type {
         @include media-min(992) {
-          margin-left: 300px;
+          margin-left: 260px;
         }
       }
       @include media-max(1199) {
@@ -45,6 +45,7 @@
         padding: 40px 20px 20px 20px;
         margin-right: 0;
         margin-bottom: 15px;
+        min-width: auto;
       }
       @include media-max(575) {
         max-height: 250px;
@@ -75,7 +76,9 @@
         height: 100%;
       }
       &:last-of-type {
-        margin-right: 260px;
+        @include media-min(992) {
+          margin-right: 260px;
+        }
         &:hover {
           .cards {
             &__title {
