@@ -4,6 +4,7 @@
   line-height: 90px;
   @include media-max(1366) {
     font-size: 60px;
+    line-height: 70px;
   }
   @include media-max(991) {
     font-size: 55px;
@@ -39,8 +40,8 @@
   }
   &-30-18 {
     font-size: 30px;
-    @include media-max(1259) {
-      font-size: 24px;
+    @include media-max(1366) {
+      font-size: 18px;
     }
     @include media-max(575) {
       font-size: 18px;

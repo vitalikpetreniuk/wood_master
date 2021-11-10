@@ -57,8 +57,10 @@
     }
   }
   &__lang {
-    margin: 90px 0 60px 0;
-    @include media-min(1281) {
+    @include media-max(575) {
+      margin: 60px 0 40px 0;
+    }
+    @include media-min(992) {
       display: none;
     }
     ul {
@@ -97,7 +99,7 @@
     background: #FFFFFF;
     opacity: 1;
     z-index: 1;
-    @include media-max(1280) {
+    @include media-max(991) {
       display: none;
     }
     &-close,
@@ -160,10 +162,9 @@
     }
   }
   &__nav {
-    margin-bottom: 90px;
     z-index: 1;
-    @include media-min(1281) {
-      margin-top: 90px;
+    @include media-max(575) {
+      margin-bottom: 70px;
     }
     ul li {
       cursor: pointer;
@@ -174,6 +175,9 @@
           padding-bottom: 20px;
           transition: .4s;
           width: fit-content;
+          @include media-max(1366) {
+            padding-bottom: 5px;
+          }
           & > a {
             display: inline-block;
             text-transform: capitalize;

@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
   <title>Wood for construction</title>
+  <link rel="stylesheet" href="js/customScroll/jquery.mCustomScrollbar.css">
   <link rel="stylesheet" href="css/app.min.css">
 </head>
 
@@ -259,7 +260,38 @@
     </div>
   </div>
 </div>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/customScroll/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="js/app.min.js"></script>
+<script>
+    (function($){
+
+        $(document).ready(function() {
+            checkWidth();
+        });
+        $(window).on("resize", function(){
+            checkWidth();
+        });
+
+
+        function checkWidth(){
+            const $vWidth = $(window).width();
+            $('#test').html($vWidth);
+
+            //Check condition for screen width
+            if($vWidth > 991){
+                $(window).on("load",function(){
+                    $(".cards ul").mCustomScrollbar({
+                        axis: "x",
+                        contentTouchScroll: true,
+                        mouseWheel: {
+                            scrollAmount: 500
+                        }
+                    });
+                });
+            }
+        }
+    })(jQuery);
+</script>
 </body>
 </html>

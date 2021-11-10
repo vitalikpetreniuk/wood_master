@@ -47,7 +47,6 @@
         i {
           margin-left: 0;
           transform: translate(0);
-          background: #b58b5b;
           transition: .4s;
         }
         span {
@@ -150,7 +149,10 @@
     background: rgba(0, 0, 0, .7);
     transition: .2s;
     &:hover {
-      background: #36291b;
+      background: #b58b5b;
+      .icon-mail {
+        background: #FFFFFF;
+      }
     }
     i {
       margin-left: 50%;

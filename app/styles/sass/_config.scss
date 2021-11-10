@@ -150,7 +150,7 @@ a {
 }
 
 .desktop-height-100vh {
-  @include media-min(1281) {
+  @include media-min(576) {
     height: 100vh;
   }
 }
