@@ -24,19 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#category3').toggleClass('hidden-background')
   })
 
-  const changeImage = (el, background) => {
+  const changeImage = (el, img) => {
     $(el).hover(() => {
-      if (!$('.menu').hasClass(background)) {
-        $('.menu').addClass(background)
-        $('.menu__background .textur').addClass('d-none')
-        $('.main-image').addClass('hidden')
-        $('.header').addClass('index-m10')
-      } else {
-        $('.menu').removeClass(background)
-        // $('.menu__background .textur').removeClass('d-none')
-        $('.main-image').removeClass('hidden')
-        $('.header').removeClass('index-m10')
-      }
+      $(img).toggleClass('active')
     })
   }
 
@@ -54,13 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Check condition for screen width
     if($vWidth > 1280){
-      changeImage('.menu__nav-list > li:first-of-type', 'bg-home')
-      changeImage('.menu__nav-list > li:nth-of-type(2)', 'bg-products')
-      changeImage('.menu__nav-list > li:nth-of-type(3)', 'bg-about')
-      changeImage('.menu__nav-list > li:last-of-type', 'bg-contacts')
-      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:first-of-type', 'bg-construct')
-      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:nth-of-type(2)', 'bg-prod')
-      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:last-of-type', 'bg-furniture')
+      changeImage('.menu__nav-list > li:first-of-type', '.menu__background img:nth-of-type(2)')
+      changeImage('.menu__nav-list > li:nth-of-type(2)', '.menu__background img:nth-of-type(3)')
+      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:first-of-type', '.menu__background img:nth-of-type(4)')
+      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:nth-of-type(2)', '.menu__background img:nth-of-type(5)')
+      changeImage('.menu__nav-list > li:nth-of-type(2) > ul > li:last-of-type', '.menu__background img:nth-of-type(6)')
+      changeImage('.menu__nav-list > li:nth-of-type(3)', '.menu__background img:nth-of-type(7)')
+      changeImage('.menu__nav-list > li:last-of-type', '.menu__background img:nth-of-type(8)')
     }
   }
 

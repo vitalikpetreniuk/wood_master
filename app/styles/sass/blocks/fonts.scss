@@ -2,7 +2,7 @@
   font-weight: 600;
   font-size: 80px;
   line-height: 90px;
-  @include media-max(1366) {
+  @include media-max(1400) {
     font-size: 60px;
     line-height: 70px;
   }
